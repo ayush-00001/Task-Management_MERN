@@ -1,0 +1,70 @@
+services:
+  # ========================================
+  # Backend API Server (Node.js + Express)
+  # ========================================
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mern-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://mongo:27017/mernapp
+      - JWT_SECRET=mern_cicd_app_super_secret_jwt_key_2024
+      - CLIENT_URL=http://localhost:3000
+    depends_on:
+      - mongo
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    restart: unless-stopped
+    networks:
+      - mern-network
+
+  # ========================================
+  # Frontend (React + Material UI)
+  # ========================================
+  client:
+    image: node:18-alpine
+    container_name: mern-frontend
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000/api
+      - CHOKIDAR_USEPOLLING=true
+      - WDS_SOCKET_HOST=127.0.0.1
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm start"
+    depends_on:
+      - server
+    restart: unless-stopped
+    networks:
+      - mern-network
+
+  # ========================================
+  # MongoDB Database
+  # ========================================
+  mongo:
+    image: mongo:6
+    container_name: mern-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+    networks:
+      - mern-network
+
+# Named volumes for persistent data
+volumes:
+  mongo_data:
+
+# Custom network for service communication
+networks:
+  mern-network:
+    driver: bridge
