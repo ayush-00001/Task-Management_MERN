@@ -1,13 +1,4 @@
-# MERN Stack CI/CD Application
 
-[![CI/CD Pipeline](https://github.com/ManuJB023/mern-cicd-app/workflows/MERN%20Stack%20CI/CD/badge.svg)](https://github.com/ManuJB023/mern-cicd-app/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
-[![React Version](https://img.shields.io/badge/react-%5E18.0.0-blue)](https://reactjs.org/)
-
-A full-stack MERN (MongoDB, Express.js, React, Node.js) application with automated CI/CD pipeline, featuring user authentication, task management, and AWS deployment capabilities.
-
-> **Note**: This is a portfolio/demonstration project. Live demo instances have been taken down to manage costs, but the application can be deployed locally or to your own cloud infrastructure using the provided configuration.
 
 ## 📋 Table of Contents
 
@@ -449,20 +440,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Express.js](https://expressjs.com/) for the web framework
 - [MongoDB](https://www.mongodb.com/) for the database
 - [AWS](https://aws.amazon.com/) for cloud infrastructure
-
-## 📞 Support
-
-If you have any questions or need help with setup, please:
-
-1. Check the [Issues](https://github.com/ManuJB023/mern-cicd-app/issues) page
-2. Read the [Documentation](docs/)
-3. Create a new issue if needed
-
-## 📗 Links
-
-- [GitHub Repository](https://github.com/ManuJB023/mern-cicd-app)
-- [Architecture Documentation](docs/architecture.md)
-- [Deployment Guide](docs/deployment.md)
 
 ----
 
