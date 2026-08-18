@@ -410,44 +410,6 @@ npm run lint         # Run ESLint
 npm run format       # Format code with Prettier
 ```
 
-## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Add tests for new functionality
-5. Commit your changes: `git commit -m 'Add amazing feature'`
-6. Push to the branch: `git push origin feature/amazing-feature`
-7. Open a Pull Request
 
-### Code Style
-- Follow ESLint configuration
-- Use Prettier for code formatting
-- Write meaningful commit messages
-- Add tests for new features
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Create React App](https://create-react-app.dev/) for the React boilerplate
-- [Material-UI](https://mui.com/) for the component library
-- [Express.js](https://expressjs.com/) for the web framework
-- [MongoDB](https://www.mongodb.com/) for the database
-- [AWS](https://aws.amazon.com/) for cloud infrastructure
-
-----
-
-**Portfolio project demonstrating full-stack development with modern DevOps practices**
-
-🌐 **Live Demo**: [https://mern-cicd-app-delta.vercel.app](https://mern-cicd-app-delta.vercel.app)
-
-⭐ Star this repository if you found it helpful!Added Docker support
-Frontend improvements
-CI/CD pipeline added
-Added deployment instructions and improvements.
